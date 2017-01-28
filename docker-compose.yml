@@ -1,0 +1,47 @@
+minecraft:
+  ports:
+    - "25565:25565"
+
+  environment:
+    EULA: "TRUE"
+
+  volumes: 
+    - MinecraftWorld:/data/world
+  image: jimmy1248/minecraft
+
+  container_name: minecraft
+
+  tty: true
+  stdin_open: true
+  restart: always
+
+  environment: 
+    #- MOTD=A Minecraft Server
+    #- ALLOW_NETHER=true
+    #- ANNOUNCE_PLAYER_ACHIEVEMENTS=true
+    #- ENABLE_COMMAND_BLOCK=false
+    #- SPAWN_ANIMAILS=true
+    #- SPAWN_MONSTERS=true
+    #- SPAWN_NPCS=true
+    #- GENERATE_STRUCTURES=true
+    #- SPAWN_NPCS=true
+    #- VIEW_DISTANCE=10
+    #- HARDCORE=false
+    #- MAX_BUILD_HEIGHT=256
+    #- FORCE_GAMEMODE=true
+    #- MAX_TICK_TIME=60000
+    #- ENABLE_QUERY=
+    #- QUERY_PORT=
+    #- ENABLE_RCON=true
+    #- RCON_PASSWORD=password
+    #- RCON_PORT=25575
+    #- MAX_PLAYERS=4
+    #- MAX_WORLD_SIZE=10000
+    #- LEVEL
+    #- SEED
+    #- PVP
+    #- GENERATOR_SETTINGS
+    #- ONLINE_MODE=true
+    #- LEVEL_TYPE=DEFAULT
+    #- DIFFICULTY=peaceful # easy, normal, and hard
+    - MODE=survival #creative adventure spectator
